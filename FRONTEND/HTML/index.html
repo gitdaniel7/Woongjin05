@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>메뉴</h1>
+        <ul>
+            <!-- 링크 다는거 질문 ㅇㅇ -->
+            <li>회원가입</li>
+            <li>프로필 정보</li>
+            <li>문의하기</li>
+        </ul>
+         <hr/>
+    </header>
+    <main>
+        <h2>회원가입</h2>
+        
+        <form>
+            <!-- 라벨을 달아서 클릭시 username이라는 아이디로 지은 곳을 가리킴 -->
+            <label for="username">사용자 이름:</label>
+            <input type="text" id="username" name="username" placeholder="사용자 이름 입력" required>
+            <!-- 이게 엔터키 느낌 -->
+            <br><br>
+
+            <label for="email">이메일:</label>
+            <!-- 이메일이 아닐 때 다시 쓰라는거 표시 하고 싶음 -->
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+            <br><br>
+
+            <label for="password">비밀번호:</label>
+            <!-- 비밀번호에 특수기호 대문자 포함시켜야한다는 것도 넣고 싶고 조건에 부합하지 않을 시 다시 쓰게 하는거 질문 -->
+            <input type="password" id="password" name="password" placeholder="비밀번호 입력" required>
+            <br><br>
+
+            <label for="age">나이:</label>
+            <input type="number" id="age" name="age" min="1" max="120" placeholder="나이 입력" required>
+            <br><br>
+
+            <label>성별:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">남성</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">여성</label>
+            <br><br>
+
+            <label for="bio">자기소개:</label>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="자기소개를 입력하세요"></textarea>
+            <br><br>
+
+            <label for="hobby">좋아하는 취미:</label>
+            <select id="hobby" name="hobby[]" required>
+                <option value="축구">축구</option>
+                <option value="농구">농구</option>
+                <option value="야구">야구</option>
+                <!-- 직접입력 넣고싶은데 어떻게 해야하는지 모르겠어요 -->
+                <optgroup label="직접입력">
+                    <input type="text" id="text" name="취미">
+                </optgroup>
+             </select>
+             <br><br>
+
+             <label for="profillpic">프로필 사진 업로드:</label>
+             <input type="file" id="profilePic" name="profilePic" accept="image/*">
+             <br><br>
+
+             <!-- 회원가입 버튼 타입 찾기 -->
+             <button type="submit">회원가입</button>
+             <button type="reset">초기화</button>
+             <label for="uploadProgress">업데이트 진행 상황:</label>
+             <!-- 이건 내가 정하는 거 말고 받아서 하는 법 -->
+             <progress id="uploadProgress" value="100" max="100"></progress> 100%
+        </form>
+    <hr/>
+    <h2>프로필 정보</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>프로필 정보 요약</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>항목</td>
+                    <td>내용</td>
+                </tr>
+                <tr>
+                    <!-- 여기 두번째에 프로필 파일 업로드 넣고싶음 -->
+                    <td>프로필</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>나이</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>자기소개</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>취미</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>프로필 정보가 성공적으로 업데이트되었습니다.</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <hr/>
+    <footer>
+        <h2>문의하기</h2>
+        
+        <a>문의: </a><a href="#">example@example.com</a>
+        <p>전화: 010-1234-5678</p>
+        <p>주소: 서울특별시 중구 예재로 123</p>
+        
+        <h3>오시는 길</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50606.04676840863!2d126.99417785!3d37.55793985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2fc53a1f59b%3A0x5f7e54ee689e9e17!2sJung%20District%2C%20Seoul!5e0!3m2!1sen!2skr!4v1752129166348!5m2!1sen!2skr" width="1000" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+    
+</body>
+</html>
