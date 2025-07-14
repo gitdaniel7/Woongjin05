@@ -8,15 +8,14 @@ body {
     font-family: Arial, sans-serif;
     background-color: gray;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+/* 전체 컨테이너를 화면 가운데에 */
 .container {
     width: 1365px;
     height: 649px;
     background-color: white;
+    position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -27,7 +26,6 @@ header {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    position: relative;
     /* 이건 참고했습니다 */
     background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
@@ -47,32 +45,28 @@ header {
 .main-box {
     flex: 1;
     background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    position: relative;
     height: calc(649px - 140px -30px);
-    min-height: 0;
-
 }
 
 .form-container {
+    position: absolute;
+    top: 82px;
+    left: 22px;
+    transform: translateY(-50%);
+    width: 130px;
     display: flex;
     flex-direction: column;
     gap: 11px;
-    min-width: 100px;
-    margin-top: 22px;
-    margin-left: 19px;
-    align-self: flex-start;
 }
 
 .form-container p {
     padding-top: 8px;
     padding-left: 8px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     font-size: 10px;
-    text-align: left;
     height: 32px;
     width: 130px;
     color: white;
@@ -85,18 +79,24 @@ header {
     background-color: lightcoral;
 }
 .form-login {
-    margin-top: 18px;
-    width: 220px;
-    margin-left: 430px;
-    background-color: #f9f9f9;
-    padding: 11px 10px 22px 10px;
+    position: absolute;
+    top:34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 230px;
     border-radius: 5px;
     color: white;
-    min-width: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: left;
+    align-items: center;
+}
+.form-login form{
+    padding: 10px 25px 25px 25px;
+    gap: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
 }
 
 .form-login label {
