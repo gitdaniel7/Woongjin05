@@ -5,9 +5,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inspire-KO, sans-serif;
     line-height: 1.6;
     min-height: 100vh;
+    background-color: #040714;
 }
 
 header {
@@ -22,11 +23,12 @@ header img{
     height: auto;
 }
 
-.글 p{
+.letter p{
     color: #f9f9f9;
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: 0;
+    font-size: 24px;
 }
 header ul {
     padding: 16px;
@@ -39,9 +41,8 @@ header ul {
     gap: 24px;
 }
 
-.더알아보기 {
-    background-color: #4CAF50;
-    color: white;
+.moreover {
+    background-color: #02d6e8;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.2s;
@@ -50,6 +51,9 @@ header ul {
     height: 60px;
     padding: 16.5px auto;
     border: none;
+    font-size: 18px;
+    color: rgb(14, 11, 20);
+    cursor: pointer;
 }
 
 .highlight {
@@ -58,16 +62,19 @@ header ul {
 
 main {
     position: relative;
-    min-height: 100vh;
+}
+.main-box-cover{
+    min-height: auto;
     width: 100%;
-    overflow: hidden;
+    position: relative;
+    padding-top: 70px;
 }
 .main-bg-img{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 92%;    
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
@@ -75,7 +82,7 @@ main {
 
 nav {
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 36px;
 }
 
@@ -85,7 +92,46 @@ nav button {
     font-size: 18px;
     height: 50px;
     line-height: 18px;
+    border-radius: 0.25rem;
+    background-color: black;
+    color:white;
+    border-color: white;
+    cursor: pointer;
 }
+nav button:hover{
+    background-color: white;
+    color:black;
+    border-color: black;
+}
+
+.login-modal-bg {
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center; align-items: center;
+}
+.login-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 36px 32px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+  min-width: 320px;
+  min-height: 160px;
+  color: #222;
+  font-size: 18px;
+}
+.login-modal label { font-size: 16px; }
+.login-modal input {
+  display: block;
+  width: 200px;
+  margin-bottom: 12px;
+  padding: 7px;
+  font-size: 15px;
+}
+.login-modal button { margin-right: 10px; }
+
 
 .main-box {
     position: relative;
@@ -93,8 +139,9 @@ nav button {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    padding: 5.6vw;
+    height: 80%;
+    padding: 0 5.6vw;
+    margin-top: 15px;
     min-height: 75vh;
 }
 
@@ -102,10 +149,12 @@ nav button {
     color: #f9f9f9;
     display: flex;
     flex-direction: column;
+    height:80%;
     width: 100%;
     max-width: 500px;
 }
 .main-logo img{
+    padding-left:10px;
     display: block;
     width: 100%;
     height: auto;
@@ -139,6 +188,7 @@ nav button {
     background-color:#02d6e8;
     cursor: pointer;
     border-radius: .25rem;
+    font-size: 18px;
 }
 .info-row {
     display: grid;
@@ -148,15 +198,14 @@ nav button {
     line-height: 1.4;
     margin-bottom: 30px;
 }
-.밑줄{
+.underline{
     text-decoration: underline;
     font-weight: 700;
 }
 .button-section {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
-    bottom: 60px;
     justify-content: center;
     align-items: center;
     top: auto;
@@ -167,24 +216,33 @@ nav button {
 }
 .button-wrapper {
     width: 100%;
-    height: 60px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .button-wrapper button {
-    width: 100%;
-    height: 3px;
-    background-color: #02d6e8;
+    min-width: 168px;
+    width:  99%;
+    height: 1px;
+    background-color: rgb(192, 192, 192);
     color: white;
     border-radius: 5px;
     cursor: pointer;
     border: none;
 }
 .button-wrapper button:hover {
-    background-color: #ffffff;
+    background-color: rgb(192, 192, 192);
+    height:3px
 }
-.재생{
+.button-wrapper button.selected {
+    background-color: rgb(192, 192, 192); /* 강조할 색상 */
+    height: 3px;
+    color: white;
+    /* 필요하면 테두리나 그림자 등 추가 */
+}
+
+.playbtn{
     background-color: transparent;
     color: transparent;
     border: none;
@@ -198,4 +256,213 @@ nav button {
     width: 40px;
     background-repeat: no-repeat;
     top: auto;
+}
+.sub-word{
+    position: relative;
+    bottom: 0;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+    margin-left:50%;
+    transform: translateX(-50%);
+    color:#e5e7eb;
+    margin-bottom: 20px;
+}
+.main-box2{
+    padding-top: 2.3vw;
+}
+.main-box2 h2{
+    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0;
+    color:#f9f9f9;
+    text-align: center;
+}
+.movie-row-container{
+    display: flex;
+    padding-top: 18px;
+    margin-bottom: 82px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height:424px;
+}
+.movie-row{
+    padding-left:70px;
+    padding-right: 70px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;  
+    gap:20px;
+    overflow-x:scroll;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+.movie-thumbnail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:242px;
+    height:303px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.movie-thumbnail-top{
+    width:100%;
+    height:auto;
+}
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding:0;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  height: 404px;
+  width:70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+.block1{
+    padding:33.12px 80.64px 0px;
+}
+.block1 .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.block1 .nav li{
+    display: flex;
+    flex-direction: column;
+    width:25%;
+    text-align: center;
+    gap:24px;
+    position: relative;
+}
+.block1 .nav li h3{
+    color: white;
+    font-size: 28px;
+    padding: 0 10px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+.block1 .nav li p{
+    color: white;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    margin-top: 24px;
+    padding: 0 10;
+}
+.block1 .nav li::after{
+    content: "";
+    background: #f9f9f9;
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    display: block;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.block1 .nav li:first-child::after {
+  display: none;
+}
+.block2{
+    position: relative;
+}
+.block2 .nav{
+    padding: 80.64px; 
+    display:flex;
+}
+.naverpay{
+    color: #f9f9f9;
+    width:50%;
+    height: 100%;
+    padding: 0 28.8px;
+    list-style: none;
+}
+.naverpay p{
+    margin:0 0 24px;
+    font-size: 38px;
+}
+.naverpay .p2{
+    margin: 24px 0 ;
+    font-size: 17px;
+}
+.naverpay ul{
+    justify-content: center;
+    display: flex;
+    gap:24px;
+}
+.naverpay ul li{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+.naverpay ul li a{
+    font-size: 18px;
+    height: 60px;
+    line-height: 18px;
+    max-width: 360px;
+    padding: 16.5px 24px;
+    background-color: #02d6e8;
+    color:#040714;
+    text-align: center;
+    cursor:pointer;
+}
+.naverpay ul li span{
+    margin:0;
+    padding:0;
+    display:block;
+    line-height: 1.4;
+    letter-spacing: 0;
+    font-size: 12px;
+    color: #c0c0c0;
+    text-align: center;
+}
+
+.img-naverpay{
+    background-image: url(https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/6EA058EEFC8C58945D21D87D927AB6087887F52D8B27DF9BBA9F5EB5890D2609/compose?format=webp&width=1080);
+    display: block;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+
+}
+.extra{
+    font-size: 12px;
+    color:#c0c0c0;
+}
+
+.block3{
+    padding: 80.64px;
+    color: white;
+}
+.block3 .first-p{
+    margin:0 0 24px;
+    text-align: center;
+    font-size: 40px;
+}
+.block3 .second-p{
+    margin: 24px 0;
+    text-align: center;
+    font-size: 16px;
 }
