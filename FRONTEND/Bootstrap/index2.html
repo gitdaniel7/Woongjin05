@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <style>
+        .modal-dialog {
+            max-width: 600px;
+            /* 원하는 너비 */
+            width: 100%;
+        }
+
+        .modal-content {
+            height: 700px;
+        }
+    </style>
+    </style>
+    <title>굿손 춘천엔타점</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">굿손 춘천엔타점</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- 맨 위 네비그룹 -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"
+        style="background-color:rgb(221, 215, 124)">
+        <div class="carousel-inner" style="max-height: 400px;">
+            <div class="carousel-item active">
+                <img src="./img/맨처음.jpg" class="d-block w-100" alt="..."
+                    style="height: 400px; object-fit: contain; margin:auto">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/두번째.jpg" class="d-block w-100" alt="..."
+                    style="transform: rotate(-90deg); height: 400px; object-fit: contain; margin: auto;">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/세번째.jpg" class="d-block w-100" alt="..."
+                    style="height: 400px; object-fit: contain; margin: auto;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- 캐러셀부분 -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="list-group">
+                    <a href="#main" class="list-group-item list-group-item-action">메인 메뉴</a>
+                    <a href="#side" class="list-group-item list-group-item-action list-group-item-primary">사이드 메뉴</a>
+                    <a href="#drinks" class="list-group-item list-group-item-action list-group-item-secondary">음주류</a>
+                </div>
+            </div>
+            <!-- 왼쪽 메뉴부분 -->
+            <div class="col-sm-8">
+                <div id="main" class="mb-5">
+                    <h6 class="text-muted fw-bold mb-3">메인 메뉴</h6>
+                    <div class="row">
+                        <!-- 소고기똠양쌀국수 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalTomyang"
+                                style="cursor: pointer;">
+                                <img src="./img/소똠.png" class="card-img-top" alt="소고기똠양쌀국수"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">소고기똠양쌀국수</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">12,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalTomyang" tabindex="-1" aria-labelledby="modalTomyangLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTomyangLabel">소고기똠양쌀국수</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/소똠.png" class="img-fluid mb-3" alt="소고기똠양쌀국수" style="height: 400px; object-fit: contain;">
+                                        <p class="mb-1 fw-bold">가격: 12,000원</p>
+                                        <p class="text-muted">매콤한 똠얌 육수에 차돌양지,토마토가 들어간 얼큰한 해장 쌀국수</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 모달로 상세페이지 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalChadol"
+                                style="cursor: pointer;">
+                                <img src="./img/차돌깐양.png" class="card-img-top" alt="..."
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">차돌깐양쌀국수</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">12,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalChadol" tabindex="-1" aria-labelledby="modalChadolLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalChadolLabel">차돌깐양쌀국수</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/차돌깐양.png" class="img-fluid mb-3" alt="분짜" style="height: 400px; object-fit: contain;">
+                                        <p class="mb-1 fw-bold">가격: 12,000원</p>
+                                        <p class="text-muted">사장님이 추천하는 담백한 소고기 육수 쌀국수</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 차돌깐양 모달 -->
+
+                        <!-- 소고기쌀국수 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalSogogi"
+                                style="cursor: pointer;">
+                                <img src="./img/소고기.png" class="card-img-top" alt="소고기쌀국수"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">소고기쌀국수</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">10,500원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalSogogi" tabindex="-1" aria-labelledby="modalSogogiLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalSogogiLabel">소고기쌀국수</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/소고기.png" class="img-fluid mb-3" alt="소고기쌀국수" style="height: 400px; object-fit: contain;">
+                                        <p class="mb-1 fw-bold">가격: 10,500원</p>
+                                        <p class="text-muted">진한 소고기 육수 쌀국수</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 넴느엉쌀국수 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalNhemnuong"
+                                style="cursor: pointer;">
+                                <img src="./img/넴느엉.jpg" class="card-img-top" alt="넴느엉쌀국수"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">넴느엉쌀국수</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">12,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalNhemnuong" tabindex="-1" aria-labelledby="modalNhemnuongLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalNhemnuongLabel">넴느엉쌀국수</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/넴느엉.jpg" class="img-fluid mb-3" alt="넴느엉쌀국수" style="height: 400px; object-fit: contain;">
+                                        <p class="mb-1 fw-bold">가격: 12,000원</p>
+                                        <p class="text-muted">진한 소고기 육수에 직접 만든 돼지고기 꼬치가 매력적인 굿손 대표 쌀국수</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 스지쌀국수 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalSuji"
+                                style="cursor: pointer;">
+                                <img src="./img/스지.png" class="card-img-top" alt="스지쌀국수"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">스지쌀국수</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">13,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalSuji" tabindex="-1" aria-labelledby="modalSujiLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalSujiLabel">스지쌀국수</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/스지.png" class="img-fluid mb-3" alt="스지쌀국수">
+                                        <p class="mb-1 fw-bold">가격: 13,000원</p>
+                                        <p class="text-muted">쫀득~ 부드러운 소힘줄과 깊고 진한 양지육수의 조합! 부드러움에 반하고 국물에 취한다!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 매운직화고기쌀국수 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalMaeun"
+                                style="cursor: pointer;">
+                                <img src="./img/매운직화.png" class="card-img-top" alt="매운직화고기쌀국수"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">매운직화고기쌀국수</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">12,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalMaeun" tabindex="-1" aria-labelledby="modalMaeunLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalMaeunLabel">매운직화고기쌀국수</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/매운직화.png" class="img-fluid mb-3" alt="매운직화고기쌀국수">
+                                        <p class="mb-1 fw-bold">가격: 12,000원</p>
+                                        <p class="text-muted">불맛 가득! 직화로 구운 돼지고기와 베트남 고추가 만나 칼칼한 매운맛의 끝판왕!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalBuncha"
+                                style="cursor: pointer;">
+                                <img src="./img/분짜2.jpg" class="card-img-top" alt="분짜"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">[대표]분짜</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">12,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalBuncha" tabindex="-1" aria-labelledby="modalBunchaLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalBunchaLabel">[대표] 분짜</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/분짜2.jpg" class="img-fluid mb-3" alt="분짜">
+                                        <p class="mb-1 fw-bold">가격: 12,000원</p>
+                                        <p class="text-muted">새콤달콤 분짜 소스에 야채, 쌀국수, 돼지고기를 적셔 먹는 하노이의 대표 면요리</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- 양곱창쌀국수 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalYang"
+                                style="cursor: pointer;">
+                                <img src="./img/양곱창.jpg" class="card-img-top" alt="양곱창쌀국수"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">양곱창쌀국수</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">14,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalYang" tabindex="-1" aria-labelledby="modalYangLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalYangLabel">양곱창쌀국수</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/양곱창.jpg" class="img-fluid mb-3" alt="양곱창쌀국수">
+                                        <p class="mb-1 fw-bold">가격: 14,000원</p>
+                                        <p class="text-muted">깐양과 곱창을 넣어 끓인 똠얌스타일의 쌀국수 * 곱창추가시 3,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 차돌볶음쌀국수 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalChadolBokkeum"
+                                style="cursor: pointer;">
+                                <img src="./img/차돌볶음.png" class="card-img-top" alt="차돌볶음쌀국수"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">차돌볶음쌀국수</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">12,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalChadolBokkeum" tabindex="-1"
+                            aria-labelledby="modalChadolBokkeumLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalChadolBokkeumLabel">차돌볶음쌀국수</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/차돌볶음.png" class="img-fluid mb-3" alt="차돌볶음쌀국수">
+                                        <p class="mb-1 fw-bold">가격: 12,000원</p>
+                                        <p class="text-muted">고소한 차돌양지를 간장에 볶아 감칠맛 폭발! 베트남식 볶음쌀국수의 매력에 빠져보세요!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 해산물똠얌쌀국수 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalSeafood"
+                                style="cursor: pointer;">
+                                <img src="./img/해산물똠.jpg" class="card-img-top" alt="해산물똠얌쌀국수"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">해산물똠얌쌀국수</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">13,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalSeafood" tabindex="-1" aria-labelledby="modalSeafoodLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalSeafoodLabel">해산물똠얌쌀국수</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/해산물똠.jpg" class="img-fluid mb-3" alt="해산물똠얌쌀국수">
+                                        <p class="mb-1 fw-bold">가격: 13,000원</p>
+                                        <p class="text-muted">해물이 듬뿍 들어간 똠얌 쌀국수</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 껌랑 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalGumrang"
+                                style="cursor: pointer;">
+                                <img src="./img/껌랑.jpg" class="card-img-top" alt="[어린이추천]껌랑"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">[어린이추천]껌랑</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">12,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalGumrang" tabindex="-1" aria-labelledby="modalGumrangLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalGumrangLabel">[어린이추천]껌랑</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/껌랑.jpg" class="img-fluid mb-3" alt="[어린이추천]껌랑">
+                                        <p class="mb-1 fw-bold">가격: 12,000원</p>
+                                        <p class="text-muted">누구나 편안하게 즐길 수 있는 베트남식 돼지고기 볶음밥</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 껌승 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalGumseung"
+                                style="cursor: pointer;">
+                                <img src="./img/껌승.jpg" class="card-img-top" alt="[대체불가]껌승"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">[대체불가]껌승</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">13,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalGumseung" tabindex="-1" aria-labelledby="modalGumseungLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalGumseungLabel">[대체불가]껌승</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/껌승.jpg" class="img-fluid mb-3" alt="[대체불가]껌승">
+                                        <p class="mb-1 fw-bold">가격: 13,000원</p>
+                                        <p class="text-muted">그릴에 구운 돼지갈비와 쟈스민 라이스, 느억맘 소스를 함께 먹는 베트남식 돼지갈비 덮밥</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 메인 메뉴 -->
+                <div id="side" class="mb-5">
+                    <h6 class="text-muted fw-bold mb-3">사이드 메뉴</h6>
+                    <div class="row">
+                        <!-- 튀김플래터 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalTwigim"
+                                style="cursor: pointer;">
+                                <img src="./img/튀플.jpg" class="card-img-top" alt="튀김플래터"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">튀김플래터</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">15,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalTwigim" tabindex="-1" aria-labelledby="modalTwigimLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTwigimLabel">튀김플래터</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/튀플.jpg" class="img-fluid mb-3" alt="튀김플래터">
+                                        <p class="mb-1 fw-bold">가격: 15,000원</p>
+                                        <p class="text-muted">치킨윙, 순살, 웨지포테이토</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 반미 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalBanhMi"
+                                style="cursor: pointer;">
+                                <img src="./img/반미.jpg" class="card-img-top" alt="반미"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">반미</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">9,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalBanhMi" tabindex="-1" aria-labelledby="modalBanhMiLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalBanhMiLabel">반미</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/반미.jpg" class="img-fluid mb-3" alt="반미">
+                                        <p class="mb-1 fw-bold">가격: 9,000원</p>
+                                        <p class="text-muted">그릴에 구운 돼지고기, 신선한 채소와 허브를 채운 베트남식 쌀바게트 샌드위치</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 새우볼꼬치 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalShrimpBall"
+                                style="cursor: pointer;">
+                                <img src="./img/새우볼.jpg" class="card-img-top" alt="새우볼꼬치"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">새우볼꼬치</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">6,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalShrimpBall" tabindex="-1"
+                            aria-labelledby="modalShrimpBallLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalShrimpBallLabel">새우볼꼬치</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/새우볼.jpg" class="img-fluid mb-3" alt="새우볼꼬치">
+                                        <p class="mb-1 fw-bold">가격: 6,000원</p>
+                                        <p class="text-muted">한 입에 쏙! 탱글한 새우볼과 새콤달콤 느억맘소스의 환상적인 조합! 사이드로 딱!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 코코넛쉬림프 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalCoconutShrimp"
+                                style="cursor: pointer;">
+                                <img src="./img/코코넛쉬.jpg" class="card-img-top" alt="코코넛쉬림프"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">코코넛쉬림프</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">4,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalCoconutShrimp" tabindex="-1"
+                            aria-labelledby="modalCoconutShrimpLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalCoconutShrimpLabel">코코넛쉬림프</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/코코넛쉬.jpg" class="img-fluid mb-3" alt="코코넛쉬림프">
+                                        <p class="mb-1 fw-bold">가격: 4,000원</p>
+                                        <p class="text-muted">코코넛향이 가득한 새우튀김(4pcs)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 짜조 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalJjajang"
+                                style="cursor: pointer;">
+                                <img src="./img/짜조.jpg" class="card-img-top" alt="짜조"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">짜조</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">6,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalJjajang" tabindex="-1" aria-labelledby="modalJjajangLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalJjajangLabel">짜조</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/짜조.jpg" class="img-fluid mb-3" alt="짜조">
+                                        <p class="mb-1 fw-bold">가격: 6,000원</p>
+                                        <p class="text-muted">다진 돼지고기와 야채를 라이스 페이퍼에 말아 튀긴 베트남식 스프링롤 (3pcs)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 파파야샐러드 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalPapaya"
+                                style="cursor: pointer;">
+                                <img src="./img/파파야.jpg" class="card-img-top" alt="파파야샐러드"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">파파야샐러드</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">8,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalPapaya" tabindex="-1" aria-labelledby="modalPapayaLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalPapayaLabel">파파야샐러드</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/파파야.jpg" class="img-fluid mb-3" alt="파파야샐러드">
+                                        <p class="mb-1 fw-bold">가격: 8,000원</p>
+                                        <p class="text-muted">파파야를 새콤달콤한 피쉬 소스에 버무린 베트남식 샐러드</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 사이드 메뉴 -->
+                <div id="drinks" class="mb-5">
+                    <h6 class="text-muted fw-bold mb-3">음주류</h6>
+                    <div class="row">
+                        <!-- 파인애플 사과쥬스 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalPineapple"
+                                style="cursor: pointer;">
+                                <img src="./img/파인사과.jpg" class="card-img-top" alt="파인애플 사과주스"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">파인애플 사과쥬스</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">2,500원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalPineapple" tabindex="-1" aria-labelledby="modalPineappleLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalPineappleLabel">파인애플 사과쥬스</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/파인사과.jpg" class="img-fluid mb-3" alt="파인애플 사과주스" style="height: 500px; object-fit: contain;">
+                                        <p class="mb-1 fw-bold">가격: 2,500원</p>
+                                        <p class="text-muted">파인애플과 사과를 신선하게 착즙한 상큼한 주스입니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 베트남 연유커피 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalCoffee"
+                                style="cursor: pointer;">
+                                <img src="./img/연유커피.jpg" class="card-img-top" alt="베트남 연유커피"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">베트남 연유커피</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">3,000원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalCoffee" tabindex="-1" aria-labelledby="modalCoffeeLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalCoffeeLabel">베트남 연유커피</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/연유커피.jpg" class="img-fluid mb-3" alt="베트남 연유커피" style="height: 500px; object-fit: contain;">
+                                        <p class="mb-1 fw-bold">가격: 3,000원</p>
+                                        <p class="text-muted">진하고 달콤한 베트남식 연유커피로 깊은 맛을 느껴보세요.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 넴머이 하이볼 -->
+                        <div class="col-sm-3 mb-4">
+                            <div class="card h-100" data-bs-toggle="modal" data-bs-target="#modalHighball"
+                                style="cursor: pointer;">
+                                <img src="./img/하이볼.jpg" class="card-img-top" alt="넴머이 하이볼"
+                                    style="height: 200px; object-fit: contain;">
+                                <div class="card-body">
+                                    <h5 class="card-title">넴머이 하이볼</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-body-secondary">7,500원</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modalHighball" tabindex="-1" aria-labelledby="modalHighballLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalHighballLabel">넴머이 하이볼</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="닫기"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="./img/하이볼.jpg" class="img-fluid mb-3" alt="넴머이 하이볼" style="height: 500px; object-fit: contain;">
+                                        <p class="mb-1 fw-bold">가격: 7,500원</p>
+                                        <p class="text-muted">상큼한 넵머이 하이볼로 특별한 시간을 즐겨보세요.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 카드 4줄 4행 부분 -->
+                <div class="col-sm-2">
+
+                </div>
+                <!-- 카드 오른쪽 부분 -->
+            </div>
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+                <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
