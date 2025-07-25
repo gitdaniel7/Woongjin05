@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: gray;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1365px;
+    height: 649px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    /* 이건 참고했습니다 */
+    background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.header-box {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 95px;
+}
+
+.header-box p {
+    color: white;
+    font-size: 23px;
+}
+
+.main-box {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: calc(649px - 140px -30px);
+    min-height: 0;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    min-width: 100px;
+    margin-top: 22px;
+    margin-left: 19px;
+    align-self: flex-start;
+}
+
+.form-container p {
+    padding-top: 8px;
+    padding-left: 8px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 10px;
+    text-align: left;
+    height: 32px;
+    width: 130px;
+    color: white;
+    background-color: #4CAF50;
+
+}
+
+/* 버튼 위로 호버 시 효과 넣어봄*/
+.form-container p:hover {
+    background-color: lightcoral;
+}
+.form-login {
+    margin-top: 18px;
+    width: 220px;
+    margin-left: 430px;
+    background-color: #f9f9f9;
+    padding: 11px 10px 22px 10px;
+    border-radius: 5px;
+    color: white;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.form-login label {
+    font-size: 11px;
+    display: block;
+    color: black;
+    margin-top: 5px;
+}
+.form-login label[for="name"]::before {
+  content: '👤';
+}
+
+.form-login input[type="text"],
+.form-login input[type="email"],
+.form-login input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin: 1px 0;
+    border-radius: 5px;
+    border: none;
+}
+.gender-row, .terms-row {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.gender-row label, .terms-row label {
+    font-size: 9px;
+    padding: 0px 0px 6px 2px;
+}
+.signup-btn {
+    width: 100%;
+    margin-top: 6px;
+    padding: 7px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 9px;
+}
+
+footer {
+    padding-top: 4px;
+    text-align: center;
+    height: 30px;
+    background-color: #333;
+}
+footer p {
+    color: white;
+    font-size: 12px;
+}

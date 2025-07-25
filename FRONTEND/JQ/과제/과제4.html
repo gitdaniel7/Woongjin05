@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>과제4</title>
+</head>
+
+<body>
+    <input id="todoInput" placeholder="할 일을 입력하세요" />
+    <button id="addBtn">추가</button>
+    <ul id="todoList"></ul>
+
+    <script>
+        $("#addBtn").click(function () {
+            //input value 가져오기
+            const inputVal = $("#todoInput").val().trim();
+            if (inputVal === '') {
+                alert("값을 입력해주세요!");
+                return;
+            }
+
+
+            //콘솔에서 확인가능
+            console.log("인풋값:", inputVal);
+            $("#todoList").append(`<li>${inputVal}</li>`);
+
+            //값 삭제
+            $("#todoInput").val("");
+        })
+
+    </script>
+</body>
+
+</html>

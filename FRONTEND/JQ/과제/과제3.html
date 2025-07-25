@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>과제3</title>
+    
+</head>
+<body>
+
+    <p id="myPara">더블클릭하거나 클릭해보세요</p>
+    <script>
+        $("#myPara").css("cursor", "pointer");
+        
+        $("#myPara").on("click",function(){
+            $("p").css("color","blue");
+        })
+        $("#myPara").on("dblclick",function(){
+            $("p").css("color","red");
+        })
+    </script>
+    
+</body>
+</html>

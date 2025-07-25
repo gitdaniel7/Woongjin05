@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 시프트 알트 에프누르면 정렬됨 -->
+        <header>
+            <div class="header-box">
+                <p>회원가입</p>
+            </div>
+        </header>
+        <main class="main-box">
+            <div class="form-container">
+                <p>로그인</p>
+                <p>도움말</p>
+                <p>약관</p>
+            </div>
+            <div class="form-login">
+                <form>
+                    <label for="name">이름:</label>
+                    <input type="text" class="input-box">
+                    <label for="email">이메일:</label>
+                    <input type="email" class="input-box">
+                    <label for="password">비밀번호:</label>
+                    <input type="password" class="input-box">
+
+                    <label>성별:</label>
+                    <div class="gender-row">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">남성</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">여성</label>
+                    </div>
+                    <div class="terms-row">
+                        <input type="checkbox" id="agree" name="agree">
+                        <label for="agree">약관에 동의합니다</label>
+                    </div>
+                    <button type="submit" class="signup-btn">회원가입</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-box">
+                <p>© 2024 MyWebsite | 연락처: email@example.com </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

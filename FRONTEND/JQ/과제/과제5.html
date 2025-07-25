@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>과제5</title>
+</head>
+<body>
+
+    <button id="fadeBtn">이미지 토클</button>
+    <img id="myImg" src="https://miro.medium.com/v2/resize:fit:860/0*eFomJUFua8tuqe8g.png" width="200px" height="200px"/>
+    
+    <script>
+        $("#fadeBtn").click(function(){
+            $("#myImg").fadeToggle();
+        })
+    </script>
+    
+</body>
+</html>

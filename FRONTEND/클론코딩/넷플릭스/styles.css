@@ -1,0 +1,84 @@
+*{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: blue;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+header{
+    position: relative;
+    background-image: url(https://occ-0-8124-58.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABaBCj4jsxErm2iWWrJxoR4eGzdRbkslxepsTcTEXJpF1rY7ba4ZlQzy5wl93Ja5_krOjoE9ojY3BdwmwsYPnBRcG5v1-KIZBr6sZ.webp?r=f84);
+    background-size: cover;
+    background-position: 50%;
+    bottom: 0;
+    left: 0;
+    height: 90vh;
+    width: 100%;
+}
+/* 이녀석이 스크롤 내리면 바로 배경 검은색으로 바뀌고 스티키헤더된다 */
+.header-top{
+    font-size: 14px;
+    height: 68px;
+    display:flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    padding: 0 4%;
+    align-items: center;
+}
+.header-left{
+    display: flex;
+    align-items: center;
+}
+.header-logo{
+    width: 100px;
+    height: 40px;
+    background-image: url("C:\Users\wpca4\OneDrive\바탕 화면\홈 - 넷플릭스_files\Netflix_Logo_PMS.png");
+}
+.header-nav ul{
+    display: flex;
+    list-style: none;
+    margin:0;
+    
+}
+.header-nav ul li{
+    padding-left:1.5vw;
+}
+.header-icon{
+    right: 4%;
+    display: flex;
+    align-items: center;
+}
+.header-icon ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+.hero-content{
+    bottom: 0;
+    left:0;
+    position: absolute;
+    right: 26.09%;
+    color: white;
+    top: 0;
+}
+.content-img{
+    width: 100%;
+    background-image: url(https://occ-0-8124-58.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABdmTkxaq9rSffENhnY1UU38pXSpSM1SwMVJtCOFb_EsUhkOGN-5dWyrioAPiwBrXG81T4m9Q-vNdLgu4gSX5PskplwSwPHRiCckQKeKYpTZd2Mn2A5qQFa_WFJh67PPmkBzgKwVgkelIvYu9MOiVhwHtjif4yDqCX3hfbVvvlA0ENgvT3a_TPA.webp?r=f54);
+}
+
+/* 문제점 
+1. 이미지파일은 가지고 있는데 파일 링크 못걸겠다
+2. 넷플릭스 개발자도구 눌러도 헤더 배경 크기 설명이 없다..
+3. 헤더 히어로 클래스부분에 위치조정이 어렵다. 그냥 떄려맞추기 식으로 픽셀 조절하면 할 수 있겠지만 vw기준으로 하려고 해서 더 안되는거 같다
+4. 영화 목록 한줄 형식이 반복되어서 그것을 만드는 css코드를 codepen에 저장해 놓았으나 이미지파일이 없어서 못하는 중이다 */
+
