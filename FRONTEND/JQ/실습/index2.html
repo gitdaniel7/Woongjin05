@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    <p></p>
+    <img src="" alt="내이미지" width="200px" height="200px" />
+    <button id="btn">버튼</button>
+    <button id="addBtn">추가</button>
+    <button id="delBtn">삭제</button>
+    <button id="toggleBtn">전환</button>
+    <button id="addImgBtn">이미지추가</button>
+
+    <script>
+        $(document).ready(function(){
+            $("h1").css("color","red");
+
+            //click
+            $("#btn").click(function(){
+                $("h1").css("color","blue");
+                alert("ㅎㅇ");
+            })
+
+            //show
+            $("#addBtn").click(function(){
+                $("h1").show();
+            })
+
+            //hide
+            $("#delBtn").click(function(){
+                $("h1").hide();
+            })
+
+            //toggle 온오프됨 보였다가 사라졌다가 
+            $("#toggleBtn").click(function(){
+                $("h1").toggle();
+            })
+            // //attr()
+            // $("#addImgBtn").click(function(){
+            //     const a = $("img").attr("alt");
+            //     console.log("attr 가져옴", a);
+            // })
+
+            //attr()로 src에 링크 사진 가져오기
+            $("#addImgBtn").click(function(){
+                $("img").attr("src","https://miro.medium.com/v2/resize:fit:860/0*eFomJUFua8tuqe8g.png");
+            })
+
+            //html() 쓸거
+            $("p").html("텍스트추가");
+
+            //값 가져오기
+            // alert($("h1").html());
+            
+            //값 설정하기
+            // $("p").html("<h1>텍스트 추가</h1>");
+
+            //text() 얜 태그 뺴야됨<h1></h1>
+            // $("p").text("텍스트 추가");
+
+            
+        })
+    </script>
+</body>
+</html>
