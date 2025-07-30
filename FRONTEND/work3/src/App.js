@@ -4,6 +4,7 @@ import CardComponent from "./components/CardComponent";
 function App() {
   const [cardData] = useState([
     {
+      id:1,
       title: "지금입기~색감원피스 무더위에 한벌로딱좋아",
       price: "65,000원",
       discount: "",
@@ -11,6 +12,7 @@ function App() {
       description: "잼마월드",
     },
     {
+      id:2,
       title: "여름 침대위의 작은변화~ 냉감침대패드 특가!",
       price: "31,900원",
       discount: "68%",
@@ -18,6 +20,7 @@ function App() {
       description: "아이르",
     },
     {
+      id:3,
       title: "바로발송! 여름내내 입어 1+1 예쁜핏 여름원피스",
       price: "37,000원",
       discount: "24%",
@@ -25,6 +28,7 @@ function App() {
       description: "미나그램",
     },
     {
+      id:4,
       title: "선화동 매운실비김치 신상매콤 달콤 옛날떡볶이",
       price: "16,000원",
       discount: "",
@@ -48,7 +52,7 @@ function App() {
       <div className="card-container">
         {cardData.map((item, idx) => (
           <CardComponent
-            key={idx}
+            key={item.id}
             title={item.title}
             price={item.price}
             discount={item.discount}
