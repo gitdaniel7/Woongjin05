@@ -18,10 +18,10 @@ function MainBanner() {
     }
 
     return (
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden" style={{ width: '1280px', margin: '0 auto' }}>
             <div
                 className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${slides.length * 100}%` }}>
+                style={{ transform: `translateX(-${currentSlide * 1280}px)`, width: `${slides.length * 1280}px` }}>
 
                 {slides.map(({ id, imageUrl, alt }) => (
                     <img
@@ -29,7 +29,7 @@ function MainBanner() {
                         src={imageUrl}
                         alt={alt}
                         className={`flex-shrink-0 object-cover pointer-events-none`}
-                        style={{ width: `${100 / slides.length}%` }}
+                        style={{ width:'1280px' }}
                     />
                 ))}
             </div>

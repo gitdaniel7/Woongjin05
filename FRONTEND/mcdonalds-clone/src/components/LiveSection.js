@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function LiveCard({ card }) {
     return (
-        <div>
+        <div className="block overflow-hidden h-full rounded-lg shadow-[0_3px_4px_rgba(0,0,0,0.1)]">
             <img src={card.image} alt={card.title} className="live-card-image" />
             <div className="live-card-content">
-                <p>{card.description}</p>
+                <p className="text-base font-medium leading-[1.9] py-[24px] px-[30px] mb-[24px]">{card.description}</p>
             </div>
         </div>
     )
 }
 
 export default function LiveSection() {
+
+    const [showAll, setShowAll] = useState(false);
+
     const liveCardsData = [
         {
             id: 1,
@@ -54,20 +57,89 @@ export default function LiveSection() {
                 "https://www.mcdonalds.co.kr/upload/main/card/1753838759065.jpg",
             title: "1955 스낵랩",
             description: "맥도날드 대표 인기 간식을 가성비 맛집 해피스낵으로 만나요!",
+        },
+        {
+            id: 7,
+            image:
+                "https://www.mcdonalds.co.kr/upload/main/card/1742460815455.jpg",
+            title: "망고 피치 아이스티",
+            description: "우바산 홍차와 과일의 만남! 향긋 달콤한 아이스티",
+        },
+        {
+            id: 8,
+            image:
+                "https://www.mcdonalds.co.kr/upload/main/card/1740559562878.jpg",
+            title: "맥크리스피 디럭스 버거",
+            description: "빠삭하게빠져드는 맛, 맥크리스피",
+        },
+        {
+            id: 9,
+            image:
+                "https://www.mcdonalds.co.kr/upload/main/card/1740559884904.jpg",
+            title: "베이컨 토마토 에그 머핀",
+            description: "갓 구워내 따뜻하고 신선한 베이컨 토마토 에그 머핀!",
+        },
+        {
+            id: 10,
+            image:
+                "https://www.mcdonalds.co.kr/upload/main/card/1749796318035.jpg",
+            title: "당신을 위해",
+            description: "당신을 위해 방금 만든 맛있는 버거",
+        },
+        {
+            id: 11,
+            image:
+                "https://www.mcdonalds.co.kr/upload/main/card/1740559650843.jpg",
+            title: "맥도날드 크루&매니저 모집",
+            description: "맥도날드와 함께 성장할 크루와 매니저를 찾습니다",
+        },
+        {
+            id: 12,
+            image:
+                "https://www.mcdonalds.co.kr/upload/main/card/1740559787721.jpg",
+            title: "맥도날드 품질 이야기",
+            description: "우리가 엄격해질수록 버거는 더 맛있어지니까!",
         }
     ]
+    const cardsToShow = showAll ? liveCardsData :
+        liveCardsData.slice(0, 6);
+
+
+
     return (
         <section className="py-8">
-            <h2 className="text-2xl font-bold mb-6 text-left">McDonald's LIVE</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center mr-[750px] mb-[50px]">McDonald's LIVE</h2>
             <div className="flex justify-center">
-                <div 
-                className="grid grid-cols-3 gap-x-[24px] gap-y-[32px] max-w-[960px]"
-                style={{ gap: '24px 32px' }} >
-                    {liveCardsData.map((card) => (
+                <div
+                    className="grid grid-cols-3 gap-x-[24px] gap-y-[32px] max-w-[960px]"
+                    style={{ gap: '24px 32px' }} >
+                    {cardsToShow.map((card) => (
                         <LiveCard key={card.id} card={card} />
                     ))}
                 </div>
             </div>
+
+            {!showAll && (
+                <div className="flex justify-center mt-8">
+                    <button
+                        type="button"
+                        onClick={() => setShowAll(true)}
+                        className="
+        inline-block 
+        w-[90px] h-[90px]
+        overflow-hidden 
+        align-top 
+        text-[0px]
+        bg-no-repeat 
+        bg-[url('https://www.mcdonalds.co.kr/kor/images/common/btn_more.png')] 
+        bg-left-top
+      "
+                    >
+                        더보기
+                    </button>
+                </div>
+            )}
+
 
         </section>
     );
