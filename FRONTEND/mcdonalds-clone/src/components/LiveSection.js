@@ -142,15 +142,15 @@ export default function LiveSection() {
                         type="button"
                         onClick={() => setShowAll(true)}
                         className="
-        inline-block 
-        w-[90px] h-[90px]
-        overflow-hidden 
-        align-top 
-        text-[0px]
-        bg-no-repeat 
-        bg-[url('https://www.mcdonalds.co.kr/kor/images/common/btn_more.png')] 
-        bg-left-top
-      "
+                                inline-block 
+                                w-[90px] h-[90px]
+                                overflow-hidden 
+                                align-top 
+                                text-[0px]
+                                bg-no-repeat 
+                                bg-[url('https://www.mcdonalds.co.kr/kor/images/common/btn_more.png')] 
+                                bg-left-top
+                                "
                     >
                         더보기
                     </button>

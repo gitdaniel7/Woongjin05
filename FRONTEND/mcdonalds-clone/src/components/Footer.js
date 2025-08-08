@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 const footerLinks = [
   { label: '개인정보처리방침', url: 'https://www.mcdonalds.co.kr/kor/etc/private.do' },
@@ -16,7 +16,7 @@ const socialLinks = [
   { label: '한국디지털접근성진흥원', url: 'http://kdaa.or.kr/CertificationSite/WA/2200/Detail', iconUrl: 'https://www.mcdonalds.co.kr/kor/images/common/web_accessibility.png' }
 ];
 
-function Footer() {
+const Footer = forwardRef((props, ref) => {
   return (
     <footer className="bg-[#292929] text-white py-8">
       <div className="w-[1168px] mx-auto flex justify-between">
@@ -69,11 +69,11 @@ function Footer() {
 
           {/* 추가 콘텐츠 */}
           <div className=" flex w-full max-w-[340px]  text-xs">
-            <div><img className='w-[60px] h-[60px] bg-white rounded-[4px]' src='https://www.mcdonalds.co.kr/kor/images/common/web_isms.png' alt='정보보호관리체계'/></div>
+            <div><img className='w-[60px] h-[60px] bg-white rounded-[4px]' src='https://www.mcdonalds.co.kr/kor/images/common/web_isms.png' alt='정보보호관리체계' /></div>
             <div>
               <nav>
                 <ul>
-                  <li className='pl-[20px]'>[인증범위 : 대외서비스(홈페이지, 맥딜리버리, 채용, VOC,<br/>쿠폰앱)(심사받지 않은 물리적 인프라 영역 제외)]</li>
+                  <li className='pl-[20px]'>[인증범위 : 대외서비스(홈페이지, 맥딜리버리, 채용, VOC,<br />쿠폰앱)(심사받지 않은 물리적 인프라 영역 제외)]</li>
                   <li className='pl-[20px]'>[유효기간 : 2024. 08. 07. ~ 2027. 08. 06.]</li>
                 </ul>
               </nav>
@@ -85,6 +85,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+});
 
 export default Footer;
