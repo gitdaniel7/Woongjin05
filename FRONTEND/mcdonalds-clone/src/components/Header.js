@@ -39,39 +39,42 @@ function Headers({ setIsSearchOpen }) {
             <header className={`sticky top-0 z-50 bg-white border-b-[1px] border-b-[#ffbc0d] relative`}>
                 <div className={`flex items-center justify-between max-w-[1168px] w-full mx-auto transition-all duration-300 ${scrolled ? "py-0" : "py-[30px]"
                     }`}>
-                    {/* 로고 */}
-                    <div>
-                        <img src="https://www.mcdonalds.co.kr/kor/images/common/logo.png" alt="맥도날드 로고" className={`transition-all duration-300 ${scrolled ? "w-[51px]" : "w-[106px]"}`} />
+                    <div className="flex items-center justify-between">
+                        {/* 로고 */}
+                        <div>
+                            <img src="https://www.mcdonalds.co.kr/kor/images/common/logo.png" alt="맥도날드 로고" className={`transition-all duration-300 ${scrolled ? "w-[51px]" : "w-[106px]"}`} />
+                        </div>
+
+
+                        {/* 메뉴 */}
+                        <nav>
+                            <ul className="flex">
+                                {menus.map((menu) => (
+                                    <li
+                                        key={menu}
+                                        className="text-[#292929] text-[20px] leading-[80px] font-semibold pr-[70px] cursor-pointer hover:text-red-600"
+                                        onMouseEnter={() => setHoveredMenu(menu)}
+                                    >
+                                        {menu}
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
                     </div>
 
-
-                    {/* 메뉴 */}
-                    <nav>
-                        <ul className="flex">
-                            {menus.map((menu) => (
-                                <li
-                                    key={menu}
-                                    className="text-[#292929] text-[20px] leading-[80px] font-semibold pr-[70px] cursor-pointer hover:text-red-600"
-                                    onMouseEnter={() => setHoveredMenu(menu)}
-                                >
-                                    {menu}
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
 
 
                     {/* 버튼 */}
                     <div className="flex items-center space-x-1">
-                        <button 
-                        className="inline-block w-20 pt-[2px] text-white text-[13px] font-semibold leading-[34px] text-center rounded-[48px] bg-[#db0007]"
-                        onClick={() => window.location.href = 'https://www.mcdonalds.co.kr/kor/store/rental.do'}>임차문의</button>
-                        <button 
-                        className="inline-block w-20 pt-[2px] text-white text-[13px] font-semibold leading-[34px] text-center rounded-[48px] bg-[#d87e00]"
-                        onClick={() => window.location.href = 'https://www.mcdonalds.co.kr/kor/story/people/recruit.do'}>RECRUIT</button>
-                        <button 
-                        className="inline-block w-20 pt-[2px] text-white text-[13px] font-semibold leading-[34px] text-center rounded-[48px] bg-[#264a36]"
-                        onClick={() => window.location.href ='https://www.mcdonalds.co.kr/eng/main.do'}>ENG</button>
+                        <button
+                            className="inline-block w-20 pt-[2px] text-white text-[13px] font-semibold leading-[34px] text-center rounded-[48px] bg-[#db0007]"
+                            onClick={() => window.location.href = 'https://www.mcdonalds.co.kr/kor/store/rental.do'}>임차문의</button>
+                        <button
+                            className="inline-block w-20 pt-[2px] text-white text-[13px] font-semibold leading-[34px] text-center rounded-[48px] bg-[#d87e00]"
+                            onClick={() => window.location.href = 'https://www.mcdonalds.co.kr/kor/story/people/recruit.do'}>RECRUIT</button>
+                        <button
+                            className="inline-block w-20 pt-[2px] text-white text-[13px] font-semibold leading-[34px] text-center rounded-[48px] bg-[#264a36]"
+                            onClick={() => window.location.href = 'https://www.mcdonalds.co.kr/eng/main.do'}>ENG</button>
                         <button className="w-20 h-[34px] bg-no-repeat bg-center bg-contain " style={{ backgroundImage: "url('https://www.mcdonalds.co.kr/kor/images/common/ico_search.png')" }} onClick={() => setIsSearchOpen(true)}><span className="sr-only">검색</span></button>
                     </div>
                 </div>
@@ -86,7 +89,7 @@ function Headers({ setIsSearchOpen }) {
                         backgroundColor: "white",
                         borderTopWidth: "1px",
                         borderTopStyle: "solid",
-                        borderTopColor: "lightgray", 
+                        borderTopColor: "lightgray",
                         borderBottomWidth: "1px",
                         borderBottomStyle: "solid",
                         borderBottomColor: "#ffbc0d",
