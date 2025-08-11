@@ -15,7 +15,7 @@ public class homework2 {
         }
 
         // 결과 출력하는거
-        System.out.println("사전순서로 정렬:");
+        System.out.println("사전순서 정렬:");
         for (String w : words) {
             System.out.println(w);
         }
