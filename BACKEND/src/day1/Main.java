@@ -1,3 +1,5 @@
+package day1;
+
 public class Main {
     public static void main(String[] args) {
         String savedId = "Daniel";   // 저장된 아이디

@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49ac536b-3d73-4819-b9e9-e2ee7783cdc0" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="49ac536b-3d73-4819-b9e9-e2ee7783cdc0" name="변경" comment="변경">
+      <change afterPath="$PROJECT_DIR$/BACKEND/src/day2/Cal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BACKEND/src/day2/Sum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BACKEND/src/day2/SumAvg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/homework2.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/Homework2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/Homework2.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/day1/Homework2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/day1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/homework1/Homework2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/homework1/Main.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,36 +46,42 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="31854L9WXdex1mbIKCcuLcAUX37" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Homework2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Woongjin05/BACKEND/homework1&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Woongjin05/BACKEND/homework1/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;애플리케이션.Main.executor&quot;: &quot;Run&quot;,
-    &quot;애플리케이션.homework2.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Cal.executor": "Run",
+    "Application.Homework2.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Sum.executor": "Run",
+    "Application.SumAvg.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Woongjin05/BACKEND/homework1",
+    "onboarding.tips.debug.path": "C:/Users/Woongjin05/BACKEND/homework1/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "애플리케이션.Main.executor": "Run",
+    "애플리케이션.homework2.executor": "Run"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/새 스크래치 파일&quot;: [
-      &quot;JAVA&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/새 스크래치 파일": [
+      "JAVA"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Woongjin05\BACKEND\homework1\BACKEND" />
