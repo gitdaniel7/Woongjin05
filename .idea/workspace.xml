@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49ac536b-3d73-4819-b9e9-e2ee7783cdc0" name="변경" comment="변경">
-      <change afterPath="$PROJECT_DIR$/BACKEND/src/day2/Cal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BACKEND/src/day2/Sum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BACKEND/src/day2/SumAvg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/Homework2.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/day1/Homework2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BACKEND/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/day1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/homework1/Homework2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/homework1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/day3/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/day3/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/day3/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/day3/Fibonacci.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACKEND/src/day3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BACKEND/src/day3/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +52,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Cal.executor": "Run",
+    "Application.Fibonacci.executor": "Run",
     "Application.Homework2.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Sum.executor": "Run",
